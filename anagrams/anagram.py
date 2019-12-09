@@ -22,6 +22,28 @@ Let's use a file of words where each line is a word:
 def find_most_anagrams_from_wordlist(wordlist):
     """Given list of words, return the word with the most anagrams."""
 
+    word_dict = {}
+
+    for word in wordlist:
+        alpha = ''.join(sorted(word))  # Alphabetize all letters in the word
+
+        # Add word to list with alphabetized word as the key
+        if word_dict.get(alpha) == None:
+            word_dict[alpha] = [word]
+        else:
+            word_dict[alpha].append(word)
+
+    most_ana_word = None  # Keep track of word with most anagrams
+    max_ana = 0   # Keep track of longest list
+
+    # Fins the anagram with the longest list and get the first word alphabetically
+    for word, lst in word_dict.items():
+        if len(lst) > max_ana:
+            max_ana = len(lst)
+            most_ana_word = sorted(lst)[0]  # First word in the alphabetized list
+
+    return most_ana_word
+
 
 if __name__ == "__main__":
     import doctest
