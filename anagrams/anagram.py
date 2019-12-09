@@ -36,7 +36,7 @@ def find_most_anagrams_from_wordlist(wordlist):
     most_ana_word = None  # Keep track of word with most anagrams
     max_ana = 0   # Keep track of longest list
 
-    # Fins the anagram with the longest list and get the first word alphabetically
+    # Find the anagram with the longest list and get the first word alphabetically
     for word, lst in word_dict.items():
         if len(lst) > max_ana:
             max_ana = len(lst)
