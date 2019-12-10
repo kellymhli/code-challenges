@@ -37,10 +37,8 @@ def is_anagram_of_palindrome(word):
 
     # Count the number of occurances of each char in word
     for char in word:
-        if char_dict.get(char) == None:
-            char_dict[char] = 1
-        else:
-            char_dict[char] += 1
+        count = char_dict.get(char, 0)
+        char_dict[char] = count + 1
 
     # Check how many chars have an odd count
     odd_count = 0
