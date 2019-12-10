@@ -26,7 +26,6 @@ Examples::
 
 """
 
-
 def is_anagram_of_palindrome(word):
     """Is the word an anagram of a palindrome?"""
 
@@ -49,7 +48,8 @@ def is_anagram_of_palindrome(word):
         if count % 2 != 0:
             odd_count += 1
 
-    if (odd and odd_count == 1) or (!odd and odd_count == 0):
+    # Odd and only one char is odd, ir even and no chars odd
+    if (odd and odd_count == 1) or (not odd and odd_count == 0):
         return True
     else:
         return False
