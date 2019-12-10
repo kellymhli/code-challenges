@@ -16,7 +16,6 @@ Make sure it works with non-square matrices:
     [[0, 0, 0, 0], [5, 0, 7, 8], [9, 0, 11, 12]]
 """
 
-
 def zero_matrix(matrix):
     """Given an NxM matrix, for cells=0, set their row and column to zeroes."""
 
@@ -30,10 +29,6 @@ def zero_matrix(matrix):
             if col == 0:
                 x_index.add(x)
                 y_index.add(y)
-
-    # Moatrix does not contain any 0's
-    if x_index == () and y_index == ():
-        return matrix
 
     # Replace rows that contains 0 with zeros
     for x in x_index:
