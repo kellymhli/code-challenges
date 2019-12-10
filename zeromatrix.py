@@ -20,13 +20,32 @@ Make sure it works with non-square matrices:
 def zero_matrix(matrix):
     """Given an NxM matrix, for cells=0, set their row and column to zeroes."""
 
-    zero_indecies = []
-    # ID the index of each 0 in the matrix
-    for row in matrix:
-        for col in row:
+    # Empty sets for x and y indecies
+    x_index = set()
+    y_index = set()
+
+    # ID the index of each 0 in the matrix and add to x and y sets
+    for x, row in enumerate(matrix):
+        for y, col in enumerate(row):
             if col == 0:
-                zero_indecies.append(n, m)
-                print(zero_indecies)
+                x_index.add(x)
+                y_index.add(y)
+
+    # Moatrix does not contain any 0's
+    if x_index == () and y_index == ():
+        return matrix
+
+    # Replace rows that contains 0 with zeros
+    for x in x_index:
+        for y in range(len(matrix[x])):
+            matrix[x][y] = 0
+
+    # Replace columns that contains 0 with zeros
+    for y in y_index:
+        for x in range(len(matrix)):
+            matrix[x][y] = 0
+
+    return matrix
 
 
 if __name__ == "__main__":
