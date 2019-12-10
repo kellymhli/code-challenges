@@ -19,6 +19,10 @@ Make sure it works with non-square matrices:
 def zero_matrix(matrix):
     """Given an NxM matrix, for cells=0, set their row and column to zeroes."""
 
+    # Return empty matrices
+    if matrix == []:
+        return matrix
+
     # Empty sets for x and y indecies
     x_index = set()
     y_index = set()
