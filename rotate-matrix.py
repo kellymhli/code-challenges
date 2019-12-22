@@ -9,14 +9,17 @@ def rotate(mat):
 
     n = len(mat)-1
 
-    i = 0
-    for x < n:
-        for y in n//2:
+    x = 0
+    y = 0
+    while x < n:
+        while y < n//2:
             tl = mat[y][x]
             mat[y][x] = mat[y][n-x]
             mat[y][n-x] = mat[n-y][n-x]
             mat[n-y][n-x] = mat[n-y][x]
             mat[n-y][x] = tl
+            y += 1
+        x += 1
 
     print(mat)
 
