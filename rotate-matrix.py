@@ -10,20 +10,13 @@ def rotate(mat):
     n = len(mat)-1
 
     i = 0
-    while i < n:
-        curr = mat[i][i]
-        nxt = mat[i][n-i]
-        mat[i][n-i] = curr
-        curr = nxt
-
-        nxt = mat[n-i][n-i]
-        mat[n-i][n-i] = curr
-        curr = nxt
-
-        nxt = mat[n-i][i]
-        mat[n-i][i] = curr
-        mat[i][i] = nxt
-        i += 1
+    for x < n:
+        for y in n//2:
+            tl = mat[y][x]
+            mat[y][x] = mat[y][n-x]
+            mat[y][n-x] = mat[n-y][n-x]
+            mat[n-y][n-x] = mat[n-y][x]
+            mat[n-y][x] = tl
 
     print(mat)
 
