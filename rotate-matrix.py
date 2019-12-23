@@ -7,11 +7,11 @@ Rotate an NxN matrix by by 90 degrees.
 
 def rotate(mat):
 
-    n = len(mat)-1
+    n = len(mat)
 
     x = 0
     y = 0
-    while x < n:
+    while x < n-1:
         while y < n//2:
             tl = mat[y][x]
             mat[y][x] = mat[y][n-x]
