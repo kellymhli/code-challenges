@@ -1,24 +1,33 @@
+def getAB(num):
+    a, b = "", ""
+    i = 0
+    while i < len(num):
+        if num[i] == ".":
+            b += num[i+1:]
+            break
+        a += num[i]
+        i += 1
+
+    return (a,b)
+
+
 def add_str(num1, num2):
-    n1 = num1.split(".")
-    n2 = num2.split(".")
-    for i, n in enumerate(n1):
-        if n == "":
-            n1[i] = 0
-    for i, n in enumerate(n2):
-        if n == "":
-            n2[i] = 0
+    a1, a2 = getAB(num1)
+    b1, b2 = getAB(num2)
 
-    l1, l2 = len(n1[-1]), len(n2[-1])
-    if l1 > l2:
-        n2[-1] += "0"*(l1-l2)
-    elif l2 > l1:
-        n1[-1] += "0"*(l2-l1)
 
-    a = str(int(n1[0]) + int(n2[0]))
-    b = str(int(n1[1]) + int(n2[1]))
-    res = a + "." + b
-    return float(res)
+    la, lb = len(a2), len(b2)
+    if la > lb:
+        b2 += "0"*(la-lb)
+    elif lb > la:
+        a2 += "0"*(lb-la)
+
+    a = float(a1 + "." + a2)
+    b = float(b1 + "." + b2)
+    return a+b
 
 print(add_str("11.11", "22.22"))
 print(add_str("11.11", "77.778"))
 print(add_str("0.0", ".888"))
+print(add_str("123.52", "11.2"))
+print(add_str("110.75", "9"))
