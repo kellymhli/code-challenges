@@ -1,10 +1,10 @@
 def shiftGrid(grid, k):
-    while k > len(grid) * len(grid[0]):
-        k -= len(grid) * len(grid[0])
 
     lst = []
     for row in grid:
         lst.extend(row)
+
+    k = k % len(lst)
     lst = lst[-k:] + lst[:-k]
 
     start, end, row_len, res = 0, len(grid[0]), len(grid[0]), []
