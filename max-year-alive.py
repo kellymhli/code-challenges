@@ -15,3 +15,5 @@ def max_year_alive(years) -> int:
 
 print(max_year_alive([(2000, 2010), (1975, 2005), (1975, 2003), (1803, 1809),
                       (1750, 1869), (1840, 1935), (1803, 1921), (1894, 1921)]))
+print(max_year_alive([(1988, 2011), (2002,2015)]))
+print(max_year_alive([]))
