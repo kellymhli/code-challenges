@@ -1,4 +1,10 @@
 def calculate_boats(people, limit):
+    """
+    Calculate the minimum number of boats needed to save people.
+    Input: list of people's weights and boat weight limit
+    Output: number of boats needed
+    """
+
     if not people:
         return 0
 
@@ -15,4 +21,4 @@ def calculate_boats(people, limit):
 
 print(calculate_boats([3,3,4], 4))  # 3
 print(calculate_boats([1,2], 3))  # 1
-print(calculate_boats([], 4))
+print(calculate_boats([], 4))  # 0
