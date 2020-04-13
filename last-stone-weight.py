@@ -13,3 +13,6 @@ def last_stone_weight(stones):
     return stones[0]
 
 print(last_stone_weight([2,7,4,1,8,1]))
+print(last_stone_weight([3,8]))
+print(last_stone_weight([0,0]))
+print(last_stone_weight([]))
