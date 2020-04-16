@@ -1,4 +1,5 @@
 def get_pattern(iterable) -> list:
+    """Generate pattern index array."""
     d, res = {}, []
     for i, item in enumerate(iterable):
         if item not in d:
