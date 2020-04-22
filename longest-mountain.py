@@ -28,4 +28,4 @@ def longest_mountain(A):
     return longest
 
 print(longest_mountain([2,2,2]))  #0
-print(longest_mountain([2,1,3,4,7,3,2,1,0,6,7,5]))  #7
+print(longest_mountain([2,1,3,4,7,3,2,1,0,6,7,5]))  #8
