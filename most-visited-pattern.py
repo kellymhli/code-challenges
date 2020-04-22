@@ -21,6 +21,14 @@ def most_visited_pattern(users, timestamp, website) -> list:
 
     return list(res_arr[0][0])
 
-print(most_visited_pattern(["h","eiy","cq","h","cq","txldsscx","cq","txldsscx","h","cq","cq"], [527896567,334462937,517687281,134127993,859112386,159548699,51100299,444082139,926837079,317455832,411747930], ["hibympufi","hibympufi","hibympufi","hibympufi","hibympufi","hibympufi","hibympufi","hibympufi","yljmntrclw","hibympufi","yljmntrclw"]))
-print(most_visited_pattern(["joe","joe","joe","james","james","james","james","mary","mary","mary"], [1,2,3,4,5,6,7,8,9,10], ["home","about","career","home","cart","maps","home","home","about","career"]))
-print(most_visited_pattern(["u1","u1","u1","u2","u2","u2"], [1,2,3,4,5,6], ["a","b","c","a","b","a"]))
+print(most_visited_pattern(["h","eiy","cq","h","cq","txldsscx","cq","txldsscx","h","cq","cq"],
+                           [527896567,334462937,517687281,134127993,859112386,159548699,51100299,444082139,926837079,317455832,411747930],
+                           ["hibympufi","hibympufi","hibympufi","hibympufi","hibympufi","hibympufi","hibympufi","hibympufi","yljmntrclw","hibympufi","yljmntrclw"]))
+
+print(most_visited_pattern(["joe","joe","joe","james","james","james","james","mary","mary","mary"],
+                           [1,2,3,4,5,6,7,8,9,10],
+                           ["home","about","career","home","cart","maps","home","home","about","career"]))
+
+print(most_visited_pattern(["u1","u1","u1","u2","u2","u2"],
+                           [1,2,3,4,5,6],
+                           ["a","b","c","a","b","a"]))
