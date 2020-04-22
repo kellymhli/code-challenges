@@ -15,3 +15,5 @@ def reverse_string(s, k) -> str:
     return res
 
 print(reverse_string('abcdefg', 2))  #bacdfeg
+print(reverse_string('abcdefg', 3))  #cbadefg
+print(reverse_string('', 1))  # ''
