@@ -12,7 +12,7 @@ def max_balloons(text) -> int:
 
     instances = float('inf')
     for c in b:
-        instances = min(instances, t.get(c, 0))
+        instances = min(instances, t.get(c, 0)//b[c])
 
     return instances
 
@@ -21,3 +21,4 @@ print(max_balloons("nlaebolko"))  # 1
 print(max_balloons("loonbalxballpoon"))  # 2
 print(max_balloons("leetcode"))  # 0
 print(max_balloons(""))  # 0
+print(max_balloons("balon"))  # 0
