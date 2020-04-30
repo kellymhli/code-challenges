@@ -12,10 +12,7 @@ def max_balloons(text) -> int:
 
     instances = float('inf')
     for c in b:
-        if c not in t:
-            return 0
-        else:
-            instances = min(instances, t[c])
+        instances = min(instances, t.get(c, 0))
 
     return instances
 
