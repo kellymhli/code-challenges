@@ -11,3 +11,4 @@ def destCity(paths) -> str:
 
 print(destCity([["London","New York"],["New York","Lima"],["Lima","Sao Paulo"]]))  # San Pablo
 print(destCity([["B","C"],["D","B"],["C","A"]]))  # A
+print(destCity([["A", "Z"]]))  # Z
